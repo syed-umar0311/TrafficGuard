@@ -1,12 +1,11 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 const AddButton = ({ 
   onPress, 
-  className = '', 
-  iconColor = '#FFFFFF',
-  iconSize = 24,
+  className = '',
+  iconSize = 28,
   position = 'absolute',
   showShadow = true,
 }) => {
@@ -14,14 +13,17 @@ const AddButton = ({
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.9}
-      className={`${position} bottom-6 right-6 w-14 h-14 rounded-full bg-primary 
-        items-center justify-center ${showShadow ? 'shadow-lg shadow-black/25' : ''}
-        active:opacity-90 z-50 ${className}`}
+      className={`${position} bottom-6 right-6 w-16 h-16 rounded-full bg-primary 
+        items-center justify-center ${showShadow ? 'shadow-lg shadow-primary/40' : ''}
+        active:opacity-90 z-50 border-4 border-white ${className}`}
       style={{
-        elevation: showShadow ? 5 : 0, // For Android shadow
+        elevation: showShadow ? 8 : 0,
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 12,
       }}
     >
-      <MaterialIcons name="add" size={iconSize} color={iconColor} />
+      <MaterialIcons name="add" size={iconSize} color="#FFFFFF" />
     </TouchableOpacity>
   );
 };
