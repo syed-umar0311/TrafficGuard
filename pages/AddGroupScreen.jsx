@@ -138,7 +138,7 @@ const AddGroupScreen = ({ navigation }) => {
       <View className="flex-row mt-3 pt-3 border-t border-gray-100 gap-2">
         <View className="flex-1">
           <SecondaryButton
-            title="Edit"
+            title="Add Route"
             onPress={() =>
               navigation.navigate("EditGroup", { groupId: group.id })
             }

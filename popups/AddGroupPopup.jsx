@@ -51,11 +51,12 @@ const AddGroupPopup = ({ visible, onClose, onSave }) => {
 
   return (
     <Modal visible={visible} transparent animationType="fade">
-      <View className="flex-1 bg-black/60 justify-center px-4">
+      <View className="flex-1 bg-black/60 justify-center px-4 ">
         <KeyboardAvoidingView
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}
         >
-          <View className="bg-white rounded-2xl overflow-hidden">
+          <View className="bg-white overflow-hidden border border-black " style={{ borderRadius: 20 }}>
+
             {/* Header */}
             <View className="px-5 py-4 border-b border-gray-200 flex-row justify-between items-center">
               <Text className="text-lg font-semibold text-gray-900">
@@ -146,14 +147,7 @@ const AddGroupPopup = ({ visible, onClose, onSave }) => {
 
             {/* Footer */}
             <View className="px-5 py-4 border-t border-gray-200 flex-row space-x-3">
-              <TouchableOpacity
-                className="flex-1 border border-gray-300 rounded-xl py-3"
-                onPress={handleClose}
-              >
-                <Text className="text-center text-sm font-semibold text-gray-700">
-                  Cancel
-                </Text>
-              </TouchableOpacity>
+             
 
               <TouchableOpacity
                 className="flex-1 bg-primary rounded-xl py-3 gap-1"
