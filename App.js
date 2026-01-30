@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AddGroupScreen from './pages/AddGroupScreen';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import GroupRoutesScreen from './pages/GroupRoutesScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,9 +18,11 @@ export default function App() {
           headerShown: false,
         }}
       >
+
         <Stack.Screen name="AddGroupScreen" component={AddGroupScreen} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
+        <Stack.Screen name="GroupRoutesScreen" component={GroupRoutesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

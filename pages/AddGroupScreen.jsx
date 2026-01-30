@@ -140,7 +140,10 @@ const AddGroupScreen = ({ navigation }) => {
           <SecondaryButton
             title="Add Route"
             onPress={() =>
-              navigation.navigate("EditGroup", { groupId: group.id })
+              navigation.navigate("GroupRoutesScreen", {
+                groupId: group.id,
+                groupName: group.name,
+              })
             }
             size="sm"
             fullWidth={true}
