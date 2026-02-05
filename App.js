@@ -6,7 +6,7 @@ import AddGroupScreen from './pages/AddGroupScreen';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import GroupRoutesScreen from './pages/GroupRoutesScreen';
-
+import MapRouteScreen from './pages/MapRouteScreen';
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -23,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="GroupRoutesScreen" component={GroupRoutesScreen} />
+        <Stack.Screen name="MapRouteScreen" component={MapRouteScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
